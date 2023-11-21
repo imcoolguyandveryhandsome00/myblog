@@ -1,0 +1,29 @@
+@hostname = 127.0.0.1
+@port =3000
+@serUr1 = http://{{hostname}}:{{port}}
+@baseUr1 = http://{{hostname}}:{{port}}
+
+###
+
+POST  {{baseUr1}}/student
+Content-Type:  application/json
+
+{
+    "id" : "123456",
+    "name": "John Doe",
+    "birthdate" : "2000-10-31",
+    "pet" : {
+        "name" : "Mojo",
+        "kind" : "Monkey"
+    },
+    "activities" : [
+        {"name" : "Freshmen Welcome","hosted" : "UP"},
+        {"name" : "Sport Day"},
+        {"name" : "ICT Loy Krathong"}
+
+    ]
+}
+###
+GET {{baseUr1}}/environment
+
+###

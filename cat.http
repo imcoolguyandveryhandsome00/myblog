@@ -1,0 +1,29 @@
+@hostname = 127.0.0.1
+@port =3000
+@serUr1 = http://{{hostname}}:{{port}}
+@baseUr1 = http://{{hostname}}:{{port}}
+
+###
+
+Get {{baseUr1}}/
+
+###
+Get {{{baseUr1}}}/status HTTP/1.1
+
+###
+POST  {{baseUr1}}/Cat
+Content-Type: application/json
+
+{
+    "name": "jack",
+    "color" : "green"
+}
+
+###
+
+POST {{baseUr1}}/Cat
+
+<request>
+        <name>Alan</name>
+        <color>Blue</time>
+</request>
